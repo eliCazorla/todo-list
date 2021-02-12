@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-const Tarea = ({ tarea }) => {
+const Tarea = ({ tarea: { nombre, realizada }, realizarTarea }) => {
 
     return (
-        <div>
-            <h2>{`Tarea: ${tarea}`}</h2>
+        <div className={realizada ? 'Tarea-realizada':""}>
+            <h3>{`Tarea: ${nombre}`}</h3>
+            <button onClick={() => realizarTarea(nombre)} disabled={realizada}>Pronta!</button>
         </div>
     )
 }
