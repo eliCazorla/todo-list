@@ -5,8 +5,9 @@ const FormAltaTarea = ({ agregarTarea }) => {
     const [tarea, setTarea] = useState("");
 
     const handleOnClick = () => {
-        if(tarea !== ""){
+        if(tarea){
             agregarTarea(tarea);
+            setTarea('');
         }
     }
 
@@ -15,6 +16,7 @@ const FormAltaTarea = ({ agregarTarea }) => {
             <input 
                 type="text" 
                 placeholder="Ingrese la tarea..."  
+                value={tarea}
                 onChange={({target: {value}}) => setTarea(value)}/>
             <button onClick={handleOnClick}>Agregar</button>
         </div>
