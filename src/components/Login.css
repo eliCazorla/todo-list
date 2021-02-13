@@ -1,0 +1,53 @@
+.login{
+    padding: 4em;
+    margin-top: 10%;
+    background-color: #000;
+    border-radius: 10px;
+    z-index: 1;
+    opacity: 0.82;
+}
+
+
+.login input{
+    display: block;
+    color: #66FCF1;
+    background:none;
+    opacity: 1.5;
+    border: 1px solid #66FCF1;
+    border-radius: 5px;
+    outline: 0;
+    text-align: center;
+    transition: 0.5s;
+    transition-property: width;
+}
+
+.login input:hover, .login input:focus{
+    width: 45%;
+}
+
+::placeholder{
+    color: #66FCF1;
+}
+
+.login input, .login button{
+    margin: 1em auto;
+    width: 40%;
+}
+
+.login button{
+    margin: 1em 30%;
+    outline: 0;
+    background: none;
+    color: white;
+    border: 1px solid #66fcf1;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: background-color, transform;
+}
+
+.login button:hover, .login button:focus, .login button:active{
+    background-color: #66fcf1;
+    transform: scale(1.1);
+}

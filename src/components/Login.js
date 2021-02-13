@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { withRouter } from  'react-router-dom';
+import './Login.css';
 
 const Login = ({ history }) => {
 
@@ -44,11 +46,11 @@ const Login = ({ history }) => {
     }
 
     return (
-        <div>
-            <input type="text" value={username} placeholder="Username" onChange={handleChangeUserName}/>      
-            <input type="password" value={password} placeholder="Password" onChange={handleChangePassword}/>
-            <button onClick={btnLogin}>Log In</button> 
-        </div>
+      <Container className="login">
+          <input type="text" value={username} placeholder="Username" onChange={handleChangeUserName}/>      
+          <input type="password" value={password} placeholder="Password" onChange={handleChangePassword}/>
+          <button onClick={btnLogin}>Log In</button> 
+      </Container>
     )
 }
 
